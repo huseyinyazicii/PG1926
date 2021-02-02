@@ -1,0 +1,61 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border:0px;
+    outline: 0px;
+    box-sizing: border-box;
+
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    font-family: sans-serif;
+}
+body{
+    background-color: #F3E5F5;
+}
+.table{
+    width: 446px;
+    border: 3px solid black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.satir1{
+    display: flex;
+    position: relative;
+}
+.satir2{
+    display: flex;
+    position: relative;
+}
+.white{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+}.black{
+    background-color: black;
+    width: 50px;
+    height: 50px;
+}
+.yazi{
+    width: 20px;
+    height: 50px;
+    text-align: center;
+    padding: 15px 5px 10px 5px;
+}
+.yazi1{
+    width: 50px;
+    height: 20px;
+    text-align: center;
+}
+.yazi2{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+#kale{
+    color :black;
+    font-size: 40px;
+    padding: 5px 8px;
+}
