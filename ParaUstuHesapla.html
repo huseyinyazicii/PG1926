@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asal Sayi</title>
+</head>
+<body>
+    <div style="height: 300px; width: 600px; background-color: black; margin: 50px auto auto auto;">
+        <div style="text-align: center; line-height: 150px;" id="Kutu">
+            <input type="text" id="Sayi" placeholder="Para Üstü Giriniz">
+            <button onclick="fnksyn()" id="button">Hesapla</button>
+            <p id="Sonuc" style="color: white; font-size: 15px;"></p>
+        </div>
+    </div>
+
+    <script>
+        function fnksyn()
+        {
+            var sayi = document.getElementById("Sayi").value;
+            sayi1 = Number(sayi);
+            var birkurus = 0;
+            var beskurus = 0;
+            var onkurus = 0;
+            var yirmibeskurus = 0;
+            var ellikurus = 0;
+            var birLira = Math.floor(sayi1);
+            var kurus = sayi1-birLira;
+            if(kurus >= 0.5)
+            {
+                ellikurus = 1;
+                kurus = kurus - 0.5;
+            }
+            if(kurus >= 0.25)
+            {
+                yirmibeskurus = 1;
+                kurus = kurus - 0.25;
+            }
+            if(kurus >= 0.1)
+            {
+                if(kurus >=0.2)
+                {
+                    onkurus = 2;
+                    kurus = kurus-0.20;
+                }
+                else
+                {
+                    onkurus = 1;
+                    kurus = kurus-0.1;
+                }
+            }
+            if(kurus >= 0.05)
+            {
+                beskurus = 1;
+                kurus = kurus - 0.05;
+            }
+            birkurus = Math.round(kurus*100);
+            document.getElementById("Sonuc").innerHTML = birLira+" lira - "+ellikurus+" adet 50 kurus - "+yirmibeskurus+" adet 25 kuruş - "+onkurus+" adet 10 kuruş - "+beskurus+" adet 5 kurus - "+birkurus+" adet 1 kuruş";
+        }
+    </script>
+</body>
+</html>

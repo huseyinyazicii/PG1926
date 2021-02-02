@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunun Saatleri</title>
+</head>
+<body>
+    
+    <div style="height: 300px; width: 300px; background-color: black; margin: 50px auto auto auto; color: white;">
+        <div style="text-align: center; line-height: 300px; font-size: 25px; color: white;" id="Kutu" onmouseover="fnksyn()">
+            <p>Merhaba</p>
+        </div>
+    </div>
+    
+    <script>
+
+        var kutu = document.getElementById("Kutu");
+
+        function fnksyn()
+        {
+            var tarih = new Date();
+            var saat=tarih.getHours();
+            if(saat>=6 && saat<10){
+                kutu.innerHTML = "Günaydın";
+            }
+            else if(saat>=10 && saat<17){
+                kutu.innerHTML = "İyi Günler";
+            }
+            else if(saat>=17 && saat<20){
+                kutu.innerHTML = "İyi Akşamlar";
+            }
+            else if(saat>=20 && saat<0){
+                kutu.innerHTML = "İyi Geceler";
+            }
+            else if(saat>=0 && saat<6){
+                kutu.innerHTML = "Esenlikler Dilerim";
+            }
+        }
+    </script>
+</body>
+</html>

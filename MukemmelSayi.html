@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mukkemel Sayi</title>
+</head>
+<body>
+    <div style="height: 300px; width: 300px; background-color: black; margin: 50px auto auto auto;">
+        <div style="text-align: center; line-height: 300px;" id="Kutu">
+            <input type="text" id="Sayi" placeholder="Sayı Giriniz">
+            <button onclick="fnksyn()" id="button">Hesapla</button>
+        </div>
+    </div>
+
+    <script>
+        function fnksyn()
+        {
+            var sayi = document.getElementById("Sayi").value;
+            sayi1 = Number(sayi);
+            var toplam = 0;
+            for(var i=1; i<sayi1; i++)
+            {
+                if(sayi1%i==0)
+                {
+                    toplam = toplam + i;
+                }
+            }
+            if(toplam == sayi1)
+            {
+                alert("Sayı Mükemmel Sayıdır.")
+            }
+            else
+            {
+                alert("Sayı Mükemmel Sayı Değildir.")
+            }
+        }
+    </script>
+</body>
+</html>
